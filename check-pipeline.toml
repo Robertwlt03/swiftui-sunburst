@@ -1,0 +1,25 @@
+# The checks of swiftui-sunburst, with check-pipeline; CI runs the same ones on a Mac.
+name = "swiftui-sunburst"
+steps = [
+    "build", "tests", "ios", "format", "lint", "nesting", "duplicates", "accessibility", "secrets",
+    "security", "guides", "files", "english", "language", "commits",
+]
+
+[language]
+terms = ["swiftui", "macos", "ios", "sunburst"]
+
+[commands.format]
+title = "Formatting (swift format)"
+command = ["swift", "format", "lint", "--strict", "--recursive", "Sources", "Tests", "Package.swift"]
+
+[commands.lint]
+title = "Length, nesting and complexity (SwiftLint)"
+command = ["swiftlint", "lint", "--quiet", "--strict"]
+
+# The package promises iOS too, so it is built for iOS as well.
+[commands.ios]
+title = "Builds for iOS (xcodebuild)"
+command = [
+    "xcodebuild", "-scheme", "SunburstChart", "-destination", "generic/platform=iOS",
+    "-derivedDataPath", ".build/ios", "build", "-quiet",
+]

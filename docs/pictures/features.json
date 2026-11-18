@@ -1,0 +1,7 @@
+{"kind": "grid", "columns": 3, "items": [
+  {"glyph": "tree", "title": "Any tree", "text": "Folders, budgets, categories: anything with children and a value."},
+  {"glyph": "window", "title": "Hover and click", "text": "The middle names the piece under the pointer; a click or tap selects it."},
+  {"glyph": "heart", "title": "VoiceOver", "text": "Every piece is a button with its label and detail."},
+  {"glyph": "globe", "title": "Light and dark", "text": "System colors per branch, outer rings fainter, on macOS and iOS."},
+  {"glyph": "bolt", "title": "Laid out once", "text": "The rings are computed when the tree changes, never on a mouse move."},
+  {"glyph": "shield", "title": "No dependencies", "text": "SwiftUI only, Swift 6 with strict concurrency."}]}
